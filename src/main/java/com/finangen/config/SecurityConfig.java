@@ -1,5 +1,7 @@
-package com.finangen.security;
+package com.finangen.config;
 
+import com.finangen.security.JWTAuthenticationFilter;
+import com.finangen.security.JWTUtils;
 import com.finangen.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
