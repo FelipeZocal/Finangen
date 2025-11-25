@@ -47,20 +47,20 @@ public class DBService {
         bancoRepo.save(banco2);
 
         //  Usuario
-        Usuario usuario1 = new Usuario(null,"João Mamão","00.000.000-3","000.000.000-3","(00)00000 0003","felipezocal@gmail.com",
+        Usuario usuario1 = new Usuario(null,"João Mamão","41.911.074-4","495.315.260-36","(73)98830 2633","felipezocal@gmail.com",
                 encoder.encode("003"),Status.ATIVO);
 
-        Usuario usuario2 = new Usuario(null,"Italo Parachoque","00.000.000-4","000.000.000-4","(00)00000 0004","arthurzocal@gmail.com",
+        Usuario usuario2 = new Usuario(null,"Italo Parachoque","22.820.929-8","22.820.929-8","(67) 99376-6347","arthurzocal@gmail.com",
                 encoder.encode("004"),Status.INATIVO);
 
         usuarioRepo.save(usuario1);
         usuarioRepo.save(usuario2);
 
         //  Admin
-        Admin admin1 = new Admin(null,"Pedro Costa","00.000.000-1","000.000.000-1","(00)00000 0001","pedrocosta@gmail.com",
+        Admin admin1 = new Admin(null,"Pedro Costa","23.294.512-3","757.671.150-79","(84) 98956-3947","pedrocosta@gmail.com",
                 encoder.encode("001"),Status.ATIVO);
 
-        Admin admin2 = new Admin(null,"Gabriel Barriga","00.000.000-2","000.000.000-2","(00)00000 0002","pedrobarriga@gmail.com",
+        Admin admin2 = new Admin(null,"Gabriel Barriga","21.630.367-9","910.878.250-40","(93) 96836-5312","pedrobarriga@gmail.com",
                 encoder.encode("002"),Status.INATIVO);
 
         adminRepo.save(admin1);
