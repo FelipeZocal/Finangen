@@ -41,7 +41,7 @@ public class UsuarioService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, EMAIL:"+ email));
     }
 
-    public Usuario create (UsuarioDTO objDto){
+    public Usuario create(UsuarioDTO objDto) {
         objDto.setId(null);
         objDto.setSenha(encoder.encode(objDto.getSenha()));
         ValidaPorCPFeEmail(objDto);
@@ -49,10 +49,17 @@ public class UsuarioService {
         return usuarioRepo.save(newObj);
     }
 
-    public Usuario update(Long id, UsuarioDTO objDto){
+    public Usuario update(Long id, UsuarioDTO objDto) {
         objDto.setId(id);
         Usuario oldObj = findById(id);
         ValidaPorCPFeEmail(objDto);
+
+        if (objDto.getSenha() != null && !objDto.getSenha().isEmpty()) {
+            objDto.setSenha(encoder.encode(objDto.getSenha()));
+        } else {
+            objDto.setSenha(oldObj.getSenha());
+        }
+
         oldObj = new Usuario(objDto);
         return usuarioRepo.save(oldObj);
     }

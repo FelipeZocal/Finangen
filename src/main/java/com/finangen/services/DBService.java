@@ -50,7 +50,7 @@ public class DBService {
         Usuario usuario1 = new Usuario(null,"João Mamão","41.911.074-4","495.315.260-36","(73)98830 2633","felipezocal@gmail.com",
                 encoder.encode("003"),Status.ATIVO);
 
-        Usuario usuario2 = new Usuario(null,"Italo Parachoque","22.820.929-8","22.820.929-8","(67) 99376-6347","arthurzocal@gmail.com",
+        Usuario usuario2 = new Usuario(null,"Italo Parachoque","22.820.929-8","005.936.871-29","(67) 99376-6347","arthurzocal@gmail.com",
                 encoder.encode("004"),Status.INATIVO);
 
         usuarioRepo.save(usuario1);
